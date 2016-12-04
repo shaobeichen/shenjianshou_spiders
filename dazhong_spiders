@@ -1,0 +1,40 @@
+var configs = {
+  domains: ["www.dianping.com"],
+  scanUrls: ["http://www.dianping.com/search/category/1/30"],//
+  contentUrlRegexs: "http://www.dianping.com/shop/\\d+",
+  helperUrlRegexes: ["http://www.dianping.com/shop/\\d+"],//http://www.dianping.com/search/category/1/30
+  enableJS: false,
+  interval: 3000,
+  fields: [
+    {
+        name: "address",
+        selector: "//div[contains(@class,'address')]",
+        required: false
+    },
+    {
+        name: "tel",
+        selector: "//p[contains(@class,'tel')]",
+        required: false
+    },
+    {
+       name: "name",
+       selector: "//h1[contains(@class,'shop-name')]",
+       required: false
+     },
+    {
+       name: "article_publish_time",
+       selector: "//span[contains(@class,'date')]",
+      required: false
+    }
+  ]
+};
+
+configs.afterExtractField = function(fieldName, data, page){
+	 if(fieldName=="article_publish_time"){
+	 data = Date.parse(new Date())/1000+"";
+	 }
+  return data;
+};
+  
+var crawler = new Crawler(configs);
+crawler.start();
