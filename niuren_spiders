@@ -1,0 +1,43 @@
+var configs = {
+  domains: ["weixin.niurenqushi.com"],
+  scanUrls: ["http://weixin.niurenqushi.com/"],
+  contentUrlRegexs: "http://weixin\\.niurenqushi\\.com/article/list\\-\\d+.html",
+  helperUrlRegexes: ["http://weixin\\.niurenqushi\\.com/article/2016-11-30/\\d+.html"],
+  enableJS: false,
+  interval: 3000,
+  fields: [
+    {
+        name: "article_title",
+        selector: "//div[contains(@class,'contitle')]/h1",
+        required: false
+    },
+    {
+       name: "article_content",
+       selector: "//div[contains(@id,'contentbody')]",
+       required: false
+    },
+    {
+       name: "article_publish_time",
+       selector: "//div[contains(@class,'contitle')]//div",
+      required: false
+    },
+     {
+       name: "article_topic",
+       selector: "//a[contains(@class,'ly')]",
+      required: false
+    }
+  ]
+};
+
+configs.afterExtractField = function(fieldName, data, page){
+  if (fieldName == "article_content") {
+        return cacheImg(data); // 返回可被托管到图片云服务器上的url
+    }
+	 if(fieldName=="article_publish_time"){
+      data = Date.parse(new Date())/1000+"";
+    }
+  return data;
+};
+  
+var crawler = new Crawler(configs);
+crawler.start();
