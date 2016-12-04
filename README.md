@@ -121,6 +121,7 @@ crawler.start();//开启爬虫
 如果在发布过程后，数据被发布了，但是其中的图片没有显示出来，那么可以试试神箭手平台的图片托管，有三种，阿里，七牛，神箭手，为了方便，我用的神箭手。
 
 [如何将图片托管到神箭手?](http://docs.shenjianshou.cn/use/picture/useSJSPhotoStorage.html)
+
 ![这里写图片描述](http://docs.shenjianshou.cn/images/publish/use_sjs_photo_storage/use_sjs_photo_storage_img_12.jpg)
 
 > 好了，如果有其他的问题，随时可以联系博主，邮箱1178539345@qq.com。
