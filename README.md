@@ -4,7 +4,7 @@
 > 既然你来到了这里，想必你肯定已经知道了神箭手云爬虫平台是干什么的，目的也是非常的明确。
 > 那么接下来的过程中，我将给你演示如何在最快时间内编写一个简单的爬虫，每一个属性的讲解，将会让你一路顺风。
 
-demo项目GitHub地址：https://github.com/zhou1178539345/shenjianshou_spiders
+demo项目GitHub地址：https://github.com/LeachZhou/shenjianshou_spiders
 
 
 
@@ -116,7 +116,7 @@ crawler.start();//开启爬虫
 
 如果是想发布到网站上，点击这里，会有很好的解释。--[数据发布](http://docs.shenjianshou.cn/use/datapub/useDataPublish.html)
 
-这里有很多集成式网站的接口，可以直接使用，博主就是用的wecenter发布的数据，www.nicesunny.com，网站没啥东西。
+这里有很多集成式网站的接口，可以直接使用，博主就是用的wecenter发布的数据。
 
 如果在发布过程后，数据被发布了，但是其中的图片没有显示出来，那么可以试试神箭手平台的图片托管，有三种，阿里，七牛，神箭手，为了方便，我用的神箭手。
 
