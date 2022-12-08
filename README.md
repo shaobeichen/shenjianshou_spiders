@@ -1,11 +1,12 @@
 # shenjianshou_spiders
 基于神箭手云爬虫平台的简单例子
 
+================================================
+【停止维护】目前官方也不推荐了，更推荐后羿采集器。
+================================================
+
 > 既然你来到了这里，想必你肯定已经知道了神箭手云爬虫平台是干什么的，目的也是非常的明确。
 > 那么接下来的过程中，我将给你演示如何在最快时间内编写一个简单的爬虫，每一个属性的讲解，将会让你一路顺风。
-
-demo项目GitHub地址：https://github.com/LeachZhou/shenjianshou_spiders
-
 
 
 
@@ -124,6 +125,5 @@ crawler.start();//开启爬虫
 
 ![这里写图片描述](http://docs.shenjianshou.cn/images/publish/use_sjs_photo_storage/use_sjs_photo_storage_img_12.jpg)
 
-> 好了，如果有其他的问题，随时可以联系博主，邮箱1178539345@qq.com。
 > 
 > 如果喜欢的话，请在GitHub上给上一颗star吧！
